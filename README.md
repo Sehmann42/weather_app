@@ -40,6 +40,26 @@ lib/
 
 Flutter · Dart · [Open-Meteo API](https://open-meteo.com/) · [geolocator](https://pub.dev/packages/geolocator) · [geocoding](https://pub.dev/packages/geocoding) · [http](https://pub.dev/packages/http) · [google_fonts](https://pub.dev/packages/google_fonts) · [weather_icons_animated](https://pub.dev/packages/weather_icons_animated)
 
+## Setup
+
+### Flutter und Linux-Abhängigkeiten
+
+Zuerst wird Flutter installiert. Anschließend werden die benötigten Linux-Abhängigkeiten für den Build von Flutter-Desktop-Anwendungen eingerichtet.
+
+```bash
+sudo snap install flutter --classic
+sudo apt install clang cmake ninja-build g++ pkg-config libgtk-3-dev
+```
+
+### GeoClue für die Standortbestimmung
+
+Für die Standortabfrage über geolocator wird unter Linux zusätzlich GeoClue benötigt. Der Dienst kann anschließend neu gestartet werden.
+
+```bash
+sudo apt install geoclue-2.0
+sudo service geoclue restart
+```
+
 ## Getting started
 
 ```bash
